@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input_output_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginStart="20sp"
+        android:layout_weight="3.5"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:background="@color/black"/>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="100sp"
+        android:layout_marginTop="20sp"
+        android:id="@+id/command_input"
+        android:layout_weight="3"
+        android:background="@color/black"
+        android:layout_marginLeft="100sp"
+        android:layout_marginRight="100sp"
+        app:cardBackgroundColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="30sp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_margin="20sp"
+                    android:id="@+id/command_add"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_add_24"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:text="*"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:gravity="center"
+                    android:textSize="39sp"
+                    android:id="@+id/command_product"/>
+
+
+                <TextView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:text="/"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="39sp"
+                    android:id="@+id/command_devide"/>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/baseline_minimize_24"
+                    android:id="@+id/command_subtract"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30sp"
+        android:orientation="vertical"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                android:elevation="100sp">
+
+                <TextView
+                    android:id="@+id/input_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="60sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2"
+                    android:gravity="center"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:id="@+id/input_2"
+                    android:layout_gravity="center"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/input_3"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5sp"
+                app:cardCornerRadius="20sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="4"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:id="@+id/input_4"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    android:id="@+id/input_5"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="6"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:id="@+id/input_6"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="7"
+                    android:id="@+id/input_7"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="8"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:textSize="60sp"
+                    android:id="@+id/input_8"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="9"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/input_9"
+                    android:textSize="60sp"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:foregroundGravity="center_horizontal"
+                android:elevation="100sp">
+
+
+                <TextView
+                    android:layout_width="125sp"
+                    android:layout_height="match_parent"
+                    android:text="="
+                    android:id="@+id/input_equalTO"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:textColor="@color/black"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="5sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:foregroundGravity="center_horizontal"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:id="@+id/input_0"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5sp"
+                app:cardCornerRadius="20sp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:elevation="100sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Clear"
+                    android:id="@+id/input_clear"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/advent_pro_light"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
